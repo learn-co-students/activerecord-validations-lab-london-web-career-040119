@@ -12,6 +12,7 @@ class Post < ActiveRecord::Base
   /Top [0-9]*/i,
   /Guess/i
 ]
+  private
 
   def clickbaiting
   if CLICKBAIT_PATTERNS.none? { |pat| pat.match title }
